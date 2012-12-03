@@ -1,0 +1,15 @@
+{
+    // Required
+    "name": "chrome-mpdebug",
+    "version": "0.1",
+    "manifest_version": 2,
+
+    "description": "Forces Mixpanel into debug mode.",
+    "content_scripts": [
+        {
+            "matches": ["http://*/*","https://*/*"],
+            "js": ["debug.js"],
+            "run_at": "document_start"
+        }
+    ]
+}
